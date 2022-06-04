@@ -11,7 +11,7 @@ import {
 
 import add_to_cart from "../../assets/img/add_to_cart.png";
 
-const Cart = () => {
+const Cart = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" />
@@ -67,6 +67,9 @@ const Cart = () => {
               backgroundColor: "steelblue",
               borderRadius: 10,
               // marginBottom: 20,
+            }}
+            onPress={() => {
+              navigation.navigate("Payment");
             }}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>

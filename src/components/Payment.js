@@ -11,7 +11,8 @@ import {
 
 import Successful_purchase from "../../assets/img/Successful_purchase.png";
 
-const Payment = () => {
+const Payment = ({ navigation }) => {
+  console.log(navigation);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" />
@@ -69,6 +70,9 @@ const Payment = () => {
               backgroundColor: "steelblue",
               borderRadius: 10,
               // marginBottom: 20,
+            }}
+            onPress={() => {
+              navigation.navigate("Shopping");
             }}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>

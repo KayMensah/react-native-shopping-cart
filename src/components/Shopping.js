@@ -11,7 +11,7 @@ import {
 
 import online_shopping2 from "../../assets/img/online_shopping2.png";
 
-const Shopping = () => {
+const Shopping = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" />
@@ -71,6 +71,9 @@ const Shopping = () => {
               backgroundColor: "steelblue",
               borderRadius: 10,
               // marginBottom: 20,
+            }}
+            onPress={() => {
+              navigation.navigate("Cart");
             }}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>
